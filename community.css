@@ -1,0 +1,321 @@
+/* General Styles */
+body {
+    display: flex;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a23;
+    color: white;
+    background: url('image/c1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #151531;
+    padding: 20px;
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+/* Sidebar Sections */
+.sidebar h3 {
+    color: #8A2BE2;
+    font-size: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 10px;
+    transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #8A2BE2;
+    border-radius: 5px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+/* Admin Header */
+.admin-header {
+    background: #151531;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    position: fixed;
+    width: calc(100% - 250px);
+    left: 250px;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Admin Profile Section */
+.admin-profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.admin-profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: 0.3s ease-in-out;
+}
+
+.admin-profile img:hover {
+    transform: scale(1.1);
+    border-color: #8A2BE2;
+}
+
+/* Dropdown Menu */
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background: #1b1b3a;
+    width: 160px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.profile-dropdown a:hover {
+    background: #8A2BE2;
+}
+
+/* Show Dropdown on Hover */
+.admin-profile:hover .profile-dropdown {
+    display: block;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 270px;
+    margin-top: 70px;
+    padding: 20px;
+    width: calc(100% - 270px);
+}
+
+/* Video Background */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==================== CHATBOX STYLING ==================== */
+.chat-container {
+    width: 420px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Start from the bottom */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+/* ==================== CHAT MESSAGES ==================== */
+.chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 400px; /* Set max height */
+    padding: 10px;
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column-reverse; /* New messages at the bottom */
+}
+
+.message {
+    max-width: 75%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    word-wrap: break-word;
+    position: relative;
+    font-size: 14px;
+}
+
+/* Sent Messages */
+.message.sent {
+    align-self: flex-end;
+    background: #DCF8C6;
+    color: #000;
+}
+
+/* Received Messages */
+.message.received {
+    align-self: flex-start;
+    background: #ffffff;
+    color: #000;
+}
+
+/* WhatsApp-style Bubble Tail */
+.message::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-right-color: #ffffff;
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.message.sent::before {
+    left: auto;
+    right: -8px;
+    border-right-color: transparent;
+    border-left-color: #DCF8C6;
+}
+
+/* Timestamp */
+.timestamp {
+    font-size: 10px;
+    color: gray;
+    text-align: right;
+    margin-top: 3px;
+}
+
+/* ==================== CHAT INPUT ==================== */
+.chat-form {
+    display: flex;
+    padding-top: 10px;
+}
+
+.chat-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.chat-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #25D366;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.chat-form button:hover {
+    background-color: #1ebe57;
+}
+
+
+/* Message Style */
+.message {
+    max-width: 75%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    word-wrap: break-word;
+    position: relative;
+    font-size: 14px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Sent Messages */
+.message.sent {
+    align-self: flex-end;
+    background: #DCF8C6;
+    color: #000;
+}
+
+/* Received Messages */
+.message.received {
+    align-self: flex-start;
+    background: #ffffff;
+    color: #000;
+}
+
+
+
+/* Animation for Fade-in Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 600px) {
+    .chat-container {
+        width: 90%;
+        height: 400px;
+    }
+    .chat-form input {
+        font-size: 14px;
+    }
+}

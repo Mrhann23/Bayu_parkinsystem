@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #0d1b2a;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    background: #242121af; 
+    width: 95.5%;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(2, 44, 137);
+    border: 3px solid rgba(0, 22, 84, 0.835); /* Neon Effect */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background: white;
+    color: #001f3f;
+    box-shadow: 0 0 10px rgb(1, 71, 248);
+}
+
+/* Hero Section */
+.feedback-hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('image/feedback-bg.jpg') center/cover;
+}
+
+.feedback-hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.feedback-hero p {
+    font-size: 18px;
+}
+
+/* Feedback Form Section */
+.feedback-container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form label {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.feedback-form input, 
+.feedback-form select, 
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.feedback-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: cyan;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.feedback-form button:hover {
+    background: white;
+    color: black;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #24212188; 
+    width:98%;
+    border-radius: 30px;
+    margin-top: 20px;s
+    box-shadow: 0 0 15px rgb(2, 44, 137);
+    border: 3px solid rgba(0, 22, 84, 0.835); /* Neon Effect */
+}
