@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #0d1b2a;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    background: #242121af; 
+    width: 95.5%;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(2, 44, 137);
+    border: 3px solid rgba(0, 22, 84, 0.835); /* Neon Effect */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background: white;
+    color: #001f3f;
+    box-shadow: 0 0 10px rgb(1, 71, 248);
+}
+
+/* Hero Section */
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+.hero {
+    background: url('image/hero-bg.jpg') center/cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    text-align: center;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.hero-overlay h1 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    padding: 10px 20px;
+    border: none;
+    background: cyan;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #00a8cc;
+}
+
+
+.about-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+/* About Box */
+.about-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+    margin-bottom: 30px;
+}
+
+/* Alternate layout for every second box */
+.about-box.reverse {
+    flex-direction: row-reverse;
+}
+
+/* About Image */
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* About Text */
+.about-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: cyan;
+    margin-bottom: 10px;
+}
+
+.about-text p,
+.about-text ul {
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.about-text ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(36, 33, 33, 0.8);
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgb(2, 44, 137);
+    border: 3px solid rgba(0, 22, 84, 0.835);
+    margin-top: 50px;
+}
