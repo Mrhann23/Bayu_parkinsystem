@@ -1,0 +1,52 @@
+/* Profile Page Styles */
+.profile-container {
+    text-align: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.profile-container h2 {
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #FFD700;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 15px auto;
+    padding: 8px;
+}
+
+button {
+    background: #FFD700;
+    padding: 10px 15px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #FF8C00;
+    transform: scale(1.05);
+}

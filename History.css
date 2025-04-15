@@ -1,0 +1,112 @@
+/* Global Styles for History Page */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #0d1b2a;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 40px;
+    background: #242121af; 
+    width: 95.5%;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgb(2, 44, 137);
+    border: 3px solid rgba(0, 22, 84, 0.835); /* Neon Effect */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-text {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background: white;
+    color: #001f3f;
+    box-shadow: 0 0 10px rgb(1, 71, 248);
+}
+
+/* Hero Section */
+.history-hero {
+    padding: 50px;
+    background: url('image/history-bg.jpg') no-repeat center center/cover;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.history-hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.history-hero p {
+    font-size: 1.2em;
+}
+
+/* History Table */
+.history-container {
+    margin: 50px auto;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.history-table th, .history-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.history-table th {
+    background: rgba(0, 255, 255, 0.2);
+    font-size: 1.2em;
+}
+
+.history-table tr:hover {
+    background: rgba(0, 255, 255, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #24212188; 
+    width:98%;
+    border-radius: 30px;
+    margin-top: 20px;s
+    box-shadow: 0 0 15px rgb(2, 44, 137);
+    border: 3px solid rgba(0, 22, 84, 0.835); /* Neon Effect */
+}
