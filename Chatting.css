@@ -1,0 +1,280 @@
+        /* Default Theme - Light Mode */
+        :root {
+            --bg-color: #f5f5f5;
+            --text-color: #333;
+            --navbar-bg: #222;
+            --navbar-text: white;
+            --btn-bg: #ff6600;
+            --btn-hover: #ff4500;
+            --overlay: rgba(0, 0, 0, 0.6);
+        }
+        
+        /* Dark Mode */
+        .dark-mode {
+            --bg-color: #121212;
+            --text-color: #fff;
+            --navbar-bg: #000;
+            --navbar-text: #f0f0f0;
+            --btn-bg: #ff8800;
+            --btn-hover: #ff6600;
+            --overlay: rgba(0, 0, 0, 0.7);
+        }
+        
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--navbar-bg);
+            padding: 15px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo img {
+            width: 50px;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links li {
+            position: relative;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--navbar-text);
+            font-size: 16px;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        
+        /* Dropdown */
+        .dropdown-menu {
+            display: block;
+            position: absolute;
+            background: var(--navbar-bg);
+            top: 50px;
+            left: 0;
+            width: 180px;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            width: 100%;
+        }
+        
+        .dropdown-menu a {
+            color: var(--navbar-text);
+            display: block;
+            padding: 12px;
+            transition: background 0.3s ease-in-out;
+        }
+        
+        .dropdown-menu a:hover {
+            background: var(--btn-bg);
+            color: white;
+        }
+        /* Theme Toggle Button */
+        .theme-switch {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--navbar-text);
+        }
+        
+
+/* Video Background */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ==================== CHATBOX STYLING ==================== */
+.chat-container {
+    width: 420px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ==================== CHAT MESSAGES ==================== */
+.chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 10px;
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 75%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    word-wrap: break-word;
+    position: relative;
+    font-size: 14px;
+}
+
+/* Sent Messages */
+.message.sent {
+    align-self: flex-end;
+    background: #DCF8C6;
+    color: #000;
+}
+
+/* Received Messages */
+.message.received {
+    align-self: flex-start;
+    background: #ffffff;
+    color: #000;
+}
+
+/* WhatsApp-style Bubble Tail */
+.message::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-right-color: #ffffff;
+    border-bottom: 0;
+    border-left: 0;
+}
+
+.message.sent::before {
+    left: auto;
+    right: -8px;
+    border-right-color: transparent;
+    border-left-color: #DCF8C6;
+}
+
+/* Timestamp */
+.timestamp {
+    font-size: 10px;
+    color: gray;
+    text-align: right;
+    margin-top: 3px;
+}
+
+/* ==================== CHAT INPUT ==================== */
+.chat-form {
+    display: flex;
+    padding-top: 10px;
+}
+
+.chat-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.chat-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #25D366;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.chat-form button:hover {
+    background-color: #1ebe57;
+}
+
+/* ==================== RESPONSIVENESS ==================== */
+@media screen and (max-width: 600px) {
+    .chat-container {
+        width: 90%;
+        height: 500px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -10;
+}
+
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}

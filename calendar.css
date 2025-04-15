@@ -1,0 +1,273 @@
+/* General Styles */
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a23;
+    color: white;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #151531;
+    padding: 20px;
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+/* Sidebar Sections */
+.sidebar h3 {
+    color: #8A2BE2;
+    font-size: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 10px;
+    transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #8A2BE2;
+    border-radius: 5px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+/* Admin Header */
+.admin-header {
+    background: #151531;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    position: fixed;
+    width: calc(100% - 250px);
+    left: 250px;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Admin Profile Section */
+.admin-profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.admin-profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: 0.3s ease-in-out;
+}
+
+.admin-profile img:hover {
+    transform: scale(1.1);
+    border-color: #8A2BE2;
+}
+
+/* Dropdown Menu */
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background: #1b1b3a;
+    width: 160px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.profile-dropdown a:hover {
+    background: #8A2BE2;
+}
+
+/* Show Dropdown on Hover */
+.admin-profile:hover .profile-dropdown {
+    display: block;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 270px;
+    margin-top: 70px;
+    padding: 20px;
+    width: calc(100% - 270px);
+}
+.calendar-container {
+    background: #1b1b3a;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.calendar th, .calendar td {
+    border: 1px solid #666;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    height: 80px;
+    vertical-align: top;
+}
+
+.date-box {
+    position: relative;
+}
+
+.memo {
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    color: black;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.memo-form {
+    margin-top: 20px;
+    padding: 20px;
+    background: #151531;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.memo-form h2 {
+    color: #8A2BE2;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.memo-form input, .memo-form select, .memo-form button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+}
+
+.memo-form input, .memo-form select {
+    background: #2A2A5E;
+    color: white;
+    border: 1px solid #8A2BE2;
+    text-align: center;
+}
+
+.memo-form input:focus, .memo-form select:focus {
+    outline: none;
+    border-color: #6A1BBE;
+    box-shadow: 0px 0px 8px rgba(138, 43, 226, 0.6);
+}
+
+.memo-form button {
+    background: #8A2BE2;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.memo-form button:hover {
+    background: #6A1BBE;
+    transform: scale(1.05);
+}
+
+.add-memo-form {
+    margin-top: 20px;
+    background: #1b1b3a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+}
+
+input {
+    background: white;
+    color: black;
+    text-align: center;
+    border: 1px solid #8A2BE2;
+}
+
+input:focus {
+    outline: none;
+    border-color: #6A1BBE;
+    box-shadow: 0px 0px 8px rgba(138, 43, 226, 0.6);
+}
+
+button {
+    background: #8A2BE2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #6a1bb7;
+    transform: scale(1.05);
+}

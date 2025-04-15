@@ -1,0 +1,248 @@
+/* General Styles */
+body {
+    display: flex;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a23;
+    
+    background: url('image/A1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #151531;
+    padding: 20px;
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+/* Sidebar Sections */
+.sidebar h3 {
+    color: #8A2BE2;
+    font-size: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 10px;
+    transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #8A2BE2;
+    border-radius: 5px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+/* Admin Header */
+.admin-header {
+    background: #151531;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    position: fixed;
+    width: calc(100% - 250px);
+    left: 250px;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Admin Profile Section */
+.admin-profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.admin-profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: 0.3s ease-in-out;
+}
+
+.admin-profile img:hover {
+    transform: scale(1.1);
+    border-color: #8A2BE2;
+}
+
+/* Dropdown Menu */
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background: #1b1b3a;
+    width: 160px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.profile-dropdown a:hover {
+    background: #8A2BE2;
+}
+
+/* Show Dropdown on Hover */
+.admin-profile:hover .profile-dropdown {
+    display: block;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 270px;
+    margin-top: 70px;
+    padding: 20px;
+    width: calc(100% - 270px);
+}
+
+/* Announcement Container */
+.announcement-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 0 15px rgba(4, 0, 255, 0.6);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Announcement Form */
+form input, form textarea, form button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+form textarea {
+    min-height: 120px;
+}
+
+form button {
+    background: #0026ff;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #d400ff;
+    transform: scale(1.05);
+}
+
+/* Announcement Cards */
+.announcement-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    animation: slideIn 1s ease-in-out;
+}
+
+.announcement-card:hover {
+    transform: scale(1.02);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(47, 0, 255, 0.8);
+}
+
+.announcement-card h4 {
+    color: #1100ff;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.announcement-card p {
+    font-size: 1.1em;
+}
+
+.announcement-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Delete Button Styling */
+.delete-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
