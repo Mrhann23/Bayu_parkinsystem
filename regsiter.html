@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <form class="login-form" action="register_process.php" method="POST">
+            <div class="logo">
+                <i class="ri-shield-user-line"></i>
+            </div>
+
+            <h2>Sign Up</h2>
+
+            <div class="input-group">
+                <i class="ri-user-line"></i>
+                <input type="text" name="username" placeholder="Full Name" required>
+            </div>
+
+            <div class="input-group">
+                <i class="ri-mail-line"></i>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-group">
+                <i class="ri-lock-line"></i>
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+
+            <div class="input-group">
+                <i class="ri-lock-password-line"></i>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            </div>
+
+            <button type="submit" name="register">Register</button>
+
+            <p class="signup">Already have an account? <a href="login.php">Login</a></p>
+        </form>
+    </div>
+
+</body>
+</html>

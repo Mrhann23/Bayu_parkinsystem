@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('image/reserve.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Default Theme - Light Mode */
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --navbar-bg: #222;
+    --navbar-text: white;
+    --btn-bg: #ff6600;
+    --btn-hover: #ff4500;
+    --overlay: rgba(0, 0, 0, 0.6);
+}
+
+/* Dark Mode */
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #fff;
+    --navbar-bg: #000;
+    --navbar-text: #f0f0f0;
+    --btn-bg: #ff8800;
+    --btn-hover: #ff6600;
+    --overlay: rgba(0, 0, 0, 0.7);
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--navbar-bg);
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--navbar-text);
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    background: var(--navbar-bg);
+    top: 50px;
+    left: 0;
+    width: 180px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    color: var(--navbar-text);
+    display: block;
+    padding: 12px;
+    transition: background 0.3s ease-in-out;
+}
+
+.dropdown-menu a:hover {
+    background: var(--btn-bg);
+    color: white;
+}
+/* Theme Toggle Button */
+.theme-switch {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--navbar-text);
+}
+/* Glassy Form Container */
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid #00ffe1;
+    box-shadow: 0 0 25px #00ffe1aa;
+    border-radius: 20px;
+    padding: 30px;
+    animation: popUp 1s ease-in-out;
+    margin-top: 100px;
+}
+
+/* Fancy Glow Header */
+.form-header {
+    background: linear-gradient(45deg, #0ff, #00f5a0);
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Form Inputs */
+.reservation-form input,
+.reservation-form select {
+    background: #000000;
+    color: #00ffe1;
+    border: 1px solid #00ffe1;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00ffe1;
+    background: #111;
+}
+
+.reservation-form button {
+    background: linear-gradient(to right, #00ffe1, #00bfff);
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.4s ease;
+}
+
+.reservation-form button:hover {
+    background: linear-gradient(to right, #00bfff, #00ffe1);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffe1;
+}
+
+/* Reservation List */
+.reservation-list {
+    margin-top: 30px;
+    border-top: 2px solid #00ffe1;
+    padding-top: 15px;
+}
+
+.reservation-item {
+    padding: 12px;
+    border-bottom: 1px dashed #00ffe1;
+    color: #a0f0ff;
+    background: rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+    border-radius: 8px;
+    animation: slideIn 0.5s ease;
+}
+
+/* Animations */
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.95) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
